@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-        auth = FirebaseAuth.getInstance(); // auth objesi ile sign in sign up yapabiliriz
+        //initializing auth
+        auth = FirebaseAuth.getInstance(); // auth objesi ile sign in-sign up yapabiliriz
     }
 
     public void signInClicked(View view){
