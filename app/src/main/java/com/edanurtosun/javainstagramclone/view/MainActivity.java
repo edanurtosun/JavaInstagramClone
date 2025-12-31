@@ -1,4 +1,4 @@
-package com.edanurtosun.javainstagramclone;
+package com.edanurtosun.javainstagramclone.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         String email = binding.emailText.getText().toString();
         String password = binding.passwordText.getText().toString();
 
-        if(email.equals("") || password.equals("")){
+        if(email.isEmpty() || password.isEmpty()){
             Toast.makeText(this, "Enter email and password", Toast.LENGTH_LONG).show();
         }else{
             auth.signInWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         String email = binding.emailText.getText().toString();
         String password = binding.passwordText.getText().toString();
 
-        if(email.equals("") || password.equals("")){
+        if(email.isEmpty() || password.isEmpty()){
             Toast.makeText(this, "Enter email and password", Toast.LENGTH_LONG).show();
         }else{
             //asenkron yapida calisir
